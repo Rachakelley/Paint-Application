@@ -1,0 +1,179 @@
+body {
+	padding: 65px;
+	display: flex;
+	flex-wrap: nowrap;
+	background: lightgray;
+	justify-content: center;
+	height: 700px;
+	background-image: url("https://s-media-cache-ak0.pinimg.com/originals/67/81/6b/67816bfa113befe1ee49b626db0afd65.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: repeat;
+	background-size: cover;
+}
+
+#myCanvas {
+	order: 1;
+	border: 3px dotted rgba(185, 231, 255, .6);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+	background: rgba(255, 255, 255, 0.55);
+	align-self: center;
+	display: block;
+}
+
+#chosenColor1 {
+	width: 40px;
+	height: 40px;
+}
+.palette {
+	order: 2;
+	display: flex;
+	flex-wrap: wrap;
+	width: 80px;
+	height: 700px;
+	justify-content: center;
+	background: linear-gradient(white, lightgray, silver, white, lightgray, silver, white, lightgray);
+}
+
+main {
+	display: flex;
+	text-align: center;
+}
+
+.description {
+	display: flex;
+	flex-direction: column;
+	width: 370px;
+	text-align: justify;
+	padding-right: 130px;
+
+}
+
+.description h1 {
+	align-self: center;
+}
+#black {
+	width: 20px;
+	height: 20px;
+	background-color: black;
+	margin: 4px;
+	border: 2px solid;
+}
+#grey {
+	width: 20px;
+	height: 20px;
+	background-color: grey;
+	margin: 4px;
+	border: 2px solid;
+}
+#darkred {
+	width: 20px;
+	height: 20px;
+	background-color: darkred;
+	margin: 4px;
+	border: 2px solid;
+}
+#red {
+	width: 20px;
+	height: 20px;
+	background-color: red;
+	margin: 4px;
+	border: 2px solid;
+}
+#orange {
+	width: 20px;
+	height: 20px;
+	background-color: orange;
+	margin: 4px;
+	border: 2px solid;
+}
+#yellow {
+	width: 20px;
+	height: 20px;
+	background-color: yellow;
+	margin: 4px;
+	border: 2px solid;
+}
+
+#green {
+	width: 20px;
+	height: 20px;
+	background-color: green;
+	margin: 4px;
+	border: 2px solid;
+}
+#darkgreen {
+	width: 20px;
+	height: 20px;
+	background-color: darkgreen;
+	margin: 4px;
+	border: 2px solid;
+}
+#lightblue {
+	width: 20px;
+	height: 20px;
+	background-color: lightblue;
+	margin: 4px;
+	border: 2px solid;
+}
+#blue {
+	width: 20px;
+	height: 20px;
+	background-color: blue;
+	margin: 4px;
+	border: 2px solid;
+}
+#purple {
+	width: 20px;
+	height: 20px;
+	background-color: purple;
+	margin: 4px;
+	border: 2px solid;
+}
+#magenta {
+	width: 20px;
+	height: 20px;
+	background-color: magenta;
+	margin: 4px;
+	border: 2px solid;
+}
+#pink {
+	width: 20px;
+	height: 20px;
+	background-color: pink;
+	margin: 4px;
+	border: 2px solid;
+}
+#white {
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	margin: 4px;
+	border: 2px solid;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

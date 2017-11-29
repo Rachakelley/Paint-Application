@@ -1,0 +1,82 @@
+<html>
+	<head>
+		<title>Paint</title>
+		<link rel="stylesheet" href="assignment5.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$("#brushSizeButton").click(function(){
+				$("#brushSizeToggle").slideToggle();
+			});
+		});
+		</script>
+    </head>
+	<body>
+		<div class="description">
+			<h1><img src="https://www.spreadshirt.ie/image-server/v1/mp/designs/16129584,width=178,height=178/comic-cartoon-funny-laughing-smiley-face-sun.png">PAINT!</h1>
+			<p>Lorem ipsum dolor sit amet, quo an sale mediocrem. Ex choro noster accusamus qui, dicam definiebas scriptorem in eam, sea et liber possim. Ius at dicant tibique. Nominavi constituam dissentiet vel no. Cu malorum patrioque scriptorem nam. 
+			Vim summo volutpat eu, cu tollit necessitatibus sea, civibus delectus theophrastus ut cum. Mei at iriure feugait erroribus, et nec labitur persequeris mediocritatem, vel eius volutpat in. Per ut quando possim, prompta dolores reprehendunt pri eu, ferri perfecto per ex. No vim modus sapientem. Labore ullamcorper mel ne. Amet zril mediocritatem per ei, fierent persequeris ea eum. Quem viris at quo, eam eu dicant eripuit accommodare. 
+			Ancillae nominavi intellegebat id his, ius veri clita laudem ea, ad duo debet legere minimum. Natum homero timeam te nam, mei an pericula periculis intellegam. Pro te tota summo interesset, lobortis reprehendunt an has, quo enim intellegam comprehensam in. Elit timeam no quo.</p>
+		
+		
+			<h3>Brush style</h3>
+			  Solid line<input type="radio" id="solidLine" name="line" checked="">
+			  <!-- Square Brush<input type="radio" id="squareBrush" name="line"> -->
+			  <!-- Size of Brush: <input type="number" id="brushSize" value="5" onchange="changeSize(this.value)"><br> -->
+		</div>
+		<main>
+			  <div class="palette">
+				<div id="black" onclick="colorChange(this.id)"></div>
+				<div id="grey" onclick="colorChange(this.id)"></div>
+				<div id="darkred" onclick="colorChange(this.id)"></div>
+				<div id="red" onclick="colorChange(this.id)"></div>
+				<div id="orange" onclick="colorChange(this.id)"></div>
+				<div id="yellow" onclick="colorChange(this.id)"></div> 
+				<div id="green" onclick="colorChange(this.id)"></div>
+				<div id="darkgreen" onclick="colorChange(this.id)"></div>
+				<div id="lightblue" onclick="colorChange(this.id)"></div>
+				<div id="blue" onclick="colorChange(this.id)"></div>
+				<div id="purple" onclick="colorChange(this.id)"></div>
+				<div id="magenta" onclick="colorChange(this.id)"></div>
+				<div id="pink" onclick="colorChange(this.id)"></div>
+				<div id="white" onclick="colorChange(this.id)"></div>
+				
+				<div class="tooltip">
+					<input type="color" id="chosenColor1" value="#ff0080" onchange="chooseColor1(this.value)">
+					<span class="tooltiptext">Color picker</span>
+				</div>
+				<div class="tooltip">
+					<img src="http://downloadicons.net/sites/default/files/eraser-icon-38164.png" onclick="eraser()" height="50" width="50">
+					<span class="tooltiptext">Eraser</span>
+				</div>
+				
+		
+				<div class="tooltip">
+					<button id="brushSizeButton"><img src="https://maxcdn.icons8.com/Share/icon/Editing//line_width1600.png" height="40" width="40"></button>
+					<!-- div below to be slide toggled by jQuery -->
+					<div id="brushSizeToggle" style="display: none;">Size of Brush:<input type="number" id="brushSize" value="5" onchange="changeSize(this.value)" style="width: 70px;"></div>
+					<span class="tooltiptext">Brush size</span>
+				</div>
+				<button type="button" onclick="erase()" style="background-color: lightpink">Clear canvas</button>
+			   </div>
+			   
+			  <!-- <input type="radio" id="black" name="color" onclick="colorChange(this.id)" checked="">Black
+			  <input type="radio" id="grey" name="color" onclick="colorChange(this.id)">Grey
+			  <input type="radio" id="darkred" name="color" onclick="colorChange(this.id)">Dark red
+			  <input type="radio" id="red" name="color" onclick="colorChange(this.id)">Red
+			  <input type="radio" id="orange" name="color" onclick="colorChange(this.id)">Orange
+			  <input type="radio" id="yellow" name="color" onclick="colorChange(this.id)">Yellow
+			  <input type="radio" id="green" name="color" onclick="colorChange(this.id)">Green
+			  <input type="radio" id="lightblue" name="color" onclick="colorChange(this.id)">Light blue
+			  <input type="radio" id="blue" name="color" onclick="colorChange(this.id)">Blue
+			  <input type="radio" id="white" name="color" onclick="colorChange(this.id)">White<br>
+			  Color 1<input type="color" id="chosenColor1" value="#ff0080" onchange="chooseColor1(this.value)"><br>
+			  Color 2<input type="color" id="chosenColor2" value="#ffffff" onchange="chooseColor2(this.value)"><br> -->
+
+			<div id="paint">
+			   <canvas id="myCanvas" height="700" width="700"></canvas>
+			</div>
+			<script src="assignment5.js"></script>
+		</main>
+	</body>
+</html>
